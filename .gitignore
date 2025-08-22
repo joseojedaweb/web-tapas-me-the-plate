@@ -1,0 +1,48 @@
+# WordPress theme/plugin repository .gitignore (para subir SOLO tu tema)
+# Node / build
+node_modules/
+npm-debug.log
+yarn.lock
+yarn-error.log
+pnpm-lock.yaml
+dist/
+build/
+*.map
+
+# Composer (si lo usas en el tema/plugin)
+vendor/
+composer.lock
+
+# SO / IDE
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Cachés
+*.log
+.cache/
+.tmp/
+.sass-cache/
+
+# WordPress uploads (NO subas medios del sitio)
+wp-content/uploads/
+
+# Config del servidor/hosting
+*.env
+.env.*
+*.local
+*.bak
+
+# Si estás versionando la carpeta /wp-content/themes/, ignora lo que no sea tu tema
+wp-admin/
+wp-includes/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/ai1wm-backups/
+wp-content/backup-*/ 
+wp-content/languages/
+wp-content/*.sql

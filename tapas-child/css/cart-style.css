@@ -1,0 +1,272 @@
+/* Global settings */
+:root {
+  /* Color gris claro usado para bordes */
+  --color-border: #eee;
+
+  /* Color gris usado para etiquetas de texto */
+  --color-label: #aaa;
+
+  /* Fuente por defecto para todo el sitio */
+  --font-default: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Fuente en negrita o semi-bold para títulos o destacados */
+  --font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+}
+
+.added_to_cart {
+  padding-left: 20px !important;
+}
+
+/* Definición del layout tipo "tabla" con porcentajes para cada columna del carrito */
+.product-image { float: left; width: 20%; } /* Imagen del producto ocupa 20% */
+.product-details { float: left; width: 37%; } /* Detalles del producto 37% */
+.product-price { float: left; width: 12%; } /* Precio unitario 12% */
+.product-quantity { float: left; width: 10%; } /* Cantidad seleccionada 10% */
+.product-removal { float: left; width: 9%; } /* Botón eliminar 9% */
+.product-line-price { float: left; width: 12%; text-align: right; } /* Precio total por línea alineado a la derecha */
+
+/* Clearfix tradicional para limpiar floats */
+.group:before,
+.group:after {
+  content: ''; /* Añade un contenido invisible */
+  display: table; /* Crea una caja tipo tabla invisible */
+} 
+.group:after {
+  clear: both; /* Limpia los flotantes anteriores */
+}
+.group {
+  zoom: 1; /* Hack para IE antiguo, activa hasLayout */
+}
+
+/* Limpia floats en estas secciones específicas */
+.shopping-cart, .column-labels, .product, .totals-item {
+  clear: both;
+}
+
+/* Inserta símbolo de dólar antes de los precios */
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+  content: '$';
+}
+
+/* Estilo general del body y encabezados */
+body {
+  padding: 0px 30px 30px 20px; /* Espaciado interior del body */
+  font-family: var(--font-default); /* Fuente definida arriba */
+  font-weight: 100; /* Muy delgada */
+}
+
+h1 {
+  font-weight: 100; /* Muy delgado */
+}
+
+label {
+  color: var(--color-label); /* Color gris claro para etiquetas */
+}
+
+.shopping-cart {
+  margin-top: 45px; /* Separación superior del contenedor del carrito */
+}
+
+/* Encabezados de columna */
+.column-labels label {
+  padding-bottom: 15px; /* Espacio dentro hacia abajo */
+  margin-bottom: 15px; /* Separación hacia el siguiente elemento */
+  
+}
+
+/* Entradas de productos en el carrito */
+.product {
+  margin-bottom: 20px; /* Separación hacia abajo */
+}
+
+/* Márgenes superiores a elementos dentro de .product */
+.product .product-details, 
+.product .product-price, 
+.product .product-quantity,
+.product .product-removal,
+.product .product-line-price {
+  margin-top: 20px; /* Márgenes superiores para separar estos elementos */
+}
+
+.product:not(:last-child) {
+  border-bottom: 1px solid var(--color-border); /* Línea debajo de cada producto menos el último */
+}
+
+.product .product-image {
+  text-align: center; /* Centra la imagen dentro de su caja */
+  margin-top: 50px;
+}
+
+.product .product-image img {
+  width: 100px; /* Define ancho fijo de la imagen */
+}
+
+.product .product-details .product-title {
+  margin-right: 20px; /* Espacio a la derecha */
+  font-family: var(--font-bold); /* Fuente más gruesa para título */
+}
+
+.product .product-details .product-description {
+  margin: 5px 20px 5px 0; /* Espaciado alrededor del texto */
+  line-height: 1.4em; /* Altura de línea legible */
+}
+
+.product .product-quantity input {
+  width: 40px; /* Define el ancho del input de cantidad */
+}
+
+.product .remove-product {
+  border: 0; /* Sin borde */
+  padding: 4px 8px; /* Espaciado interno */
+  background-color: #c66; /* Rojo claro */
+  color: #fff; /* Texto blanco */
+  font-family: var(--font-bold); /* Negrita */
+  font-size: 12px; /* Tamaño pequeño */
+  border-radius: 3px; /* Bordes redondeados */
+}
+
+.product .remove-product:hover {
+  background-color: #a44; /* Rojo más oscuro al pasar el ratón */
+}
+
+
+
+/* Totales del carrito */
+.totals .totals-item {
+  float: right; /* Alineado a la derecha */
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.totals .totals-item label {
+  float: left; /* Etiqueta alineada a la izquierda */
+  clear: both;
+  width: 79%;
+  text-align: right; /* Texto alineado a la derecha */
+}
+
+.totals .totals-item .totals-value {
+  float: right; /* Valor alineado a la derecha */
+  width: 21%;
+  text-align: right;
+}
+
+.totals .totals-item-total {
+  font-family: var(--font-bold); /* Fuente destacada para total */
+}
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #6b6; /* Verde claro */
+  color: #fff; /* Texto blanco */
+  font-size: 25px; /* Tamaño grande del botón */
+  border-radius: 3px; /* Bordes redondeados */
+}
+
+.checkout:hover {
+  background-color: #494; /* Verde más oscuro al hacer hover */
+}
+
+/* Hacer que los elementos de totals-item sean contenedores flexibles */
+.totals-item {
+  display: flex;              /* Usamos flexbox */
+  justify-content: space-between;  /* El espacio se distribuye entre los elementos */
+  align-items: center;        /* Alineamos los elementos verticalmente al centro */
+  padding: 10px 0;            /* Agregamos un pequeño padding vertical */
+}
+
+/* Alineamos el texto a la izquierda */
+.totals-item label {
+  white-space: nowrap;        /* Evita que el texto se divida en varias líneas */
+}
+
+/* Alineamos el número a la derecha */
+.totals-item .totals-value {
+  white-space: nowrap;        /* Evita que el número se divida en varias líneas */
+}
+
+
+
+/* Estilos responsivos para tablets */
+@media screen and (max-width: 650px) {
+  .shopping-cart {
+      margin: 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border); /* Línea superior para separar carrito */
+  }
+
+  .column-labels {
+      display: none; /* Oculta los encabezados de columna */
+  }
+
+  .product-image {
+      float: right;
+      width: auto;
+  }
+
+  .product-image img {
+      margin: 0 0 10px 10px;
+  }
+
+  .product-details {
+      float: none;
+      margin-bottom: 10px;
+      width: auto;
+  }
+
+  .product-price {
+      clear: both;
+      width: 70px;
+  }
+
+  .product-quantity {
+      width: 100px;
+  }
+
+  .product-quantity input {
+      margin-left: 20px;
+  }
+
+  .product-quantity:before {
+      content: 'x'; /* Añade una "x" antes del input */
+  }
+
+  .product-removal {
+      width: auto;
+  }
+
+  .product-line-price {
+      float: right;
+      width: 70px;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 350px) {
+  .product-removal {
+      float: right;
+  }
+
+  .product-line-price {
+      float: right;
+      clear: left;
+      width: auto;
+      margin-top: 10px;
+  }
+
+  .product .product-line-price:before {
+      content: 'Item Total: $'; /* Prefijo explicativo en pantallas pequeñas */
+  }
+
+  .totals .totals-item label {
+      width: 60%;
+  }
+
+  .totals .totals-item .totals-value {
+      width: 40%;
+  }
+}

@@ -1,0 +1,120 @@
+/*ESTILO GENERALES*/
+body {
+    /*font-family: 'Playfair Display', serif;*/
+    /*background-color: #f5f2eb;*/
+    background-color: #fffefa;
+    margin: 0 auto;
+}
+
+/*************-------------------------  HEADER  -----------------------------***************/
+/*************-------------------------  FIN HEADER  -----------------------------***************/
+
+.p-descripcionSecciones {
+    font-style: italic;
+    border-radius: 6px;
+}
+
+.resaltar-span-descripcion {
+    font-size: large;
+    font-weight: bold;
+}
+
+/*Paginacion de secciones*/
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/*ESTILO PAGE-BOOKING*/
+/* Estilos generales del contenedor del formulario Booking*/
+
+
+#booking-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+/* Estilos para las etiquetas (labels) */
+#booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para los campos de entrada (inputs) */
+#booking-form input[type="text"],
+#booking-form input[type="email"],
+#booking-form input[type="tel"],
+#booking-form input[type="date"],
+#booking-form input[type="time"],
+#booking-form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Estilos para el botón de enviar */
+#booking-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#booking-form button[type="submit"]:hover {
+    background-color: #005177;
+}
+
+/* Estilos para mensajes de éxito */
+#booking-form+p {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #booking-form {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    #booking-form input[type="text"],
+    #booking-form input[type="email"],
+    #booking-form input[type="tel"],
+    #booking-form input[type="date"],
+    #booking-form input[type="time"],
+    #booking-form input[type="number"],
+    #booking-form button[type="submit"] {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

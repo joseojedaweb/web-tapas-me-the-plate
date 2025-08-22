@@ -1,0 +1,789 @@
+/*ESTILOS TODAS LAS SECICONES MENOS HEADER.PHP Y FOOTER.PHP*/
+
+/*********************--------- INDEX -------********************************/
+.index-main .hero {
+    position: relative;
+    width: 100%;
+    max-width: 98%;
+    margin: 0 auto;
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.index-main .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.index-main .carousel,
+.index-main .carousel-inner,
+.index-main .carousel-item,
+.index-main .page-header,
+.index-main .page-header-image {
+    width: 100%;
+    height: 100%;
+}
+
+.index-main .carousel-control-next,
+.index-main .carousel-control-prev {
+    z-index: 1040;
+}
+
+.index-main .collapse.navbar-collapse {
+    z-index: 1045;
+}
+
+.index-main .page-header-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.index-main .hero-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.index-main .hero-text {
+    z-index: 2;
+    color: #fff;
+}
+
+.index-main .title {
+    font-size: 70px;
+    font-weight: 700;
+    position: relative;
+    top: -130px;
+}
+
+.index-main .descripcion,
+.index-main .botonEnlace {
+    position: relative;
+    top: -130px;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.index-main .fade-in,
+.index-main .fade-in-1,
+.index-main .fade-in-2,
+.index-main .fade-in-3 {
+    opacity: 0;
+}
+
+.index-main .fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.index-main .fade-in-1 {
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+}
+
+.index-main .fade-in-2 {
+    animation: fadeIn 1.5s ease-in-out 1s forwards;
+}
+
+.index-main .fade-in-3 {
+    animation: fadeIn 1.5s ease-in-out 1.5s forwards;
+}
+
+.index-main .fade-in-delay {
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+/* IMAGEN LOGO ANIMADA */
+.index-main .img-animada {
+    opacity: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.index-main .img-animada:hover {
+    transform: scale(1.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .index-main .carousel-item h2.title {
+        font-size: 60px !important;
+    }
+
+    .index-main .carousel-item p {
+        font-size: 13px !important;
+    }
+
+    .index-main .hero {
+        height: 78vh;
+
+    }
+
+}
+
+/* ICONOS PROJECT 5 */
+.index-main .icono-instagram,
+.index-main .icono-whatsapp,
+.index-main .icono-correo,
+.index-main .icono-llamada {
+    font-size: 50px;
+    transition: transform ease-in-out;
+}
+
+.index-main .icono-instagram-project5:hover,
+.index-main .icono-whatsapp:hover,
+.index-main .icono-correo:hover,
+.index-main .icono-llamada:hover {
+    transform: scale(2.0);
+}
+
+.index-main .icono-correo,
+.index-main .icono-llamada {
+    font-size: 30px;
+}
+
+/* CONTACT FORM 7 SUBMIT BUTTON */
+.index-main .wpcf7-submit:hover {
+    background-color: #fa7a50;
+}
+
+/* VIDEO */
+.index-main .bloque-video {
+    text-align: center;
+}
+
+.index-main .video {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/****** BLOG INDEX ******/
+.index-main .card.card-blog .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.index-main .card.card-blog .card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.index-main .card.card-blog .card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index-main .card-description {
+    flex-grow: 1;
+}
+
+.index-main .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.index-main .card.card-blog {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px;
+    justify-content: space-between;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.index-main .card a:not(.btn):not(.nav-link):not([data-toggle="collapse"]):not(.footer-link) {
+    border-bottom: none;
+}
+
+/*********************--------- FIN INDEX -------********************************/
+
+/*-----------------------------------------------------------------------------*/
+
+/*********************--------- OUR SERVICES -------********************************/
+.ours-services-main .section {
+    background: none;
+    position: relative;
+    padding-top: 0 !important;
+}
+
+/* Animación para el título */
+.ours-services-main #animacion-h2-page-ours-services {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Square Peg', cursive;
+}
+
+/* Definimos la animación */
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Estilo del subtítulo H3 */
+.ours-services-main .our-services-subtitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Estilo del párrafo principal */
+.ours-services-main .our-services-paragraph {
+    font-size: 1.125rem;
+    color: #34495e;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Estilo del listado */
+.ours-services-main .our-services-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Estilo de ítems del listado */
+.ours-services-main .our-services-list li {
+    font-size: 1.125rem;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Estilo de los span en el listado */
+.ours-services-main .our-services-list li span,
+.ours-services-main .spanOursServices {
+    font-size: 1.25rem;
+    color: #1abc9c;
+}
+
+/* Párrafo final */
+.ours-services-main .our-services-paragraph-final {
+    font-size: 1.125rem;
+    color: #34495e;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.ours-services-main .our-services-list li p {
+    margin: 0;
+    font-size: 1.125rem;
+    color: #34495e;
+    line-height: 1.5;
+}
+
+.ours-services-main .our-services-list-wrapper {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/*********************--------- FIN OUR SERVICES -------********************************/
+
+/*-----------------------------------------------------------------------------*/
+
+/*********************--------- MENU -------********************************/
+.menu-main .d-inline-flex {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Animación para el título solo en el menú */
+.menu-main #animacion-h2-page-menu {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Definimos la animación (esto es global, pero puedes dejarlo tal cual si solo usas la animación aquí y en Ours Services, o poner el @keyframes una sola vez en todo el CSS global) */
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/*********************--------- FIN MENU -------********************************/
+
+/*********************--------- SINGLE MENU -------********************************/
+.single-menu-main .post-thumbnail {
+    text-align: center;
+}
+
+/* Evitar desbordamiento de texto en móviles */
+.single-menu-main .post-content ul,
+.single-menu-main .post-content li {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Asegura que todo el contenedor también se comporte bien */
+.single-menu-main .post-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 576px) {
+    .single-menu-main .post-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Afecta solo a imágenes dentro de single-menu-main */
+.single-menu-main img {
+    max-width: 100%;
+    height: auto;
+}
+
+.single-menu-main .section {
+    background-color: transparent;
+}
+
+/*********************--------- FIN SINGLE MENU -------********************************/
+
+/*-----------------------------------------------------------------------------*/
+
+/*********************--------- ABOUT US -------********************************/
+/* Animación para el título (about us) */
+.about-main .title {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Definimos la animación */
+/* (El @keyframes puede ir una sola vez en tu CSS global si ya existe, no hace falta duplicar) */
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.about-main #about-content {
+    font-weight: 400 !important;
+    color: black;
+}
+
+.about-main .description {
+    text-transform: none;
+}
+
+/*********************--------- FIN ABOUT US -------********************************/
+
+/*-----------------------------------------------------------------------------*/
+
+/*********************--------- BLOG -------********************************/
+.blog-main .pagination a:hover {
+    background-color: #eee;
+}
+
+.blog-main .logo {
+    transition: transform 0.2s ease-in-out;
+}
+
+.blog-main .logo:hover {
+    transform: scale(1.2);
+}
+
+.blog-main .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-main .card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-main .card-body {
+    flex-grow: 1;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-main .card-description {
+    flex-grow: 1;
+}
+
+.blog-main .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Animación para el título */
+.blog-main .title {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Definimos la animación */
+@keyframes slideInFromLeft {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/*********************--------- FIN BLOG -------********************************/
+
+/*-----------------------------------------------------------------------------*/
+
+/*********************--------- BOOKING -------********************************/
+.booking-main .section-booking {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Variables CSS: puedes dejarlas globales si ya existen, o ponerlas aquí si solo usas en booking */
+.booking-main {
+    --side-padding: 20px;
+    --border-radius: 34px;
+    --accent-br: 15px;
+}
+
+/* Si quieres la fuente solo para booking: */
+.booking-main {
+    font-family: "Nunito", sans-serif;
+}
+
+.booking-main .calendar {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.booking-main .calendar select {
+    background-color: #f3f4f6;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 1.02rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    appearance: none;
+}
+
+.booking-main .calendar__opts,
+.booking-main .calendar__buttons {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+}
+
+.booking-main .calendar__opts {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    padding: 20px var(--side-padding);
+}
+
+.booking-main .calendar__body {
+    background-image: linear-gradient(to bottom, #f3f4f6, #fff);
+}
+
+.booking-main .calendar__days {
+    background-color: #fff;
+    padding: 0 var(--side-padding) 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.booking-main .calendar__days>div {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: #c5c8ca;
+}
+
+.booking-main .calendar__dates {
+    padding: 10px var(--side-padding);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.booking-main .calendar__date {
+    text-align: center;
+    height: calc(400px / 6 - var(--side-padding));
+    line-height: calc(400px / 6 - var(--side-padding));
+    font-weight: 600;
+    font-size: 1.02rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.booking-main .calendar__date::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: calc(400px / 6 - var(--side-padding) * 0.9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--accent-br);
+    transition: background-color 0.3s ease;
+}
+
+.booking-main .calendar__date:hover::before {
+    background-color: #ededed;
+}
+
+.booking-main .calendar__date--grey {
+    color: #c5c8ca;
+    cursor: not-allowed;
+}
+
+.booking-main .calendar__date--selected {
+    color: #ff374b;
+}
+
+.booking-main .calendar__date--selected::before {
+    background-color: #ffeaec;
+    border-radius: 0px;
+}
+
+.booking-main .calendar__buttons {
+    padding: 10px var(--side-padding) 20px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.booking-main .calendar__button {
+    font-weight: 700;
+    font-size: 1.02rem;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.booking-main .calendar__button--grey {
+    background-color: #f3f4f6;
+}
+
+.booking-main .calendar__button--primary {
+    background-color: #1752ff;
+    color: #fff;
+    transition: box-shadow 0.3s, transform 0.2s linear;
+}
+
+.booking-main .calendar__button--primary:hover {
+    box-shadow: 0 20px 30px -13px rgba(23, 82, 255, 0.45);
+    transform: translateY(-3px);
+}
+
+.booking-main .calendar__button--primary:active {
+    box-shadow: 0 10px 10px -6px rgba(23, 82, 255, 0.45);
+    transform: translateY(-1px);
+}
+
+.booking-main .calendar__date span {
+    position: relative;
+    z-index: 1;
+}
+
+.booking-main .step2-inline-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-main .step2-inline-fields .field {
+    flex: 1;
+    min-width: 120px;
+}
+
+.booking-main .step2-inline-fields label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.booking-main .step2-inline-fields select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón "Next" del paso 2 */
+.booking-main .booking-next-button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.booking-main .booking-next-button:hover {
+    background-color: #005177;
+}
+
+@media (max-width: 768px) {
+    .booking-main .calendar {
+        max-width: 100vh;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
+
+/*********************--------- FIN BOOKING -------********************************/
+
+/*********************--------- SINGLE RESERVAS -------********************************/
+/* Estilos para la página de detalles de la reserva */
+.single-reservas {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.single-reservas h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.single-reservas p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/*********************--------- FIN SINGLE RESERVAS -------********************************/
+
+/*-----------------------------------------------------------------------------*/
+
+/*********************--------- SINGLE -------********************************/
+/* Estilo común para los banners */
+.single-main .banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    .single-main .banner-img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.single-main .post-content ul,
+.single-main .post-content li,
+.single-main .post-content p {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.single-main .post-content {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Opcional: evitar sangrías excesivas en listas anidadas */
+.single-main .post-content ul ul {
+    margin-left: 1rem;
+}
+
+/* Asegura que no hay padding/margin lateral extra en pantallas pequeñas */
+@media (max-width: 576px) {
+    .single-main .post-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Centrar la imagen destacada */
+.single-main .post-thumbnail {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.single-main .post-thumbnail img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*********************--------- FIN SINGLE -------********************************/

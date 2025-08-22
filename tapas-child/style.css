@@ -1,0 +1,481 @@
+/*
+Theme Name:     Tapas Child
+Template:       tapas-theme
+Text Domain:    tapas-child
+*/
+
+/* Personaliza el formulario de checkout */
+
+/* Ocultar breadcrumbs solo en la página de Finalizar Compra */
+/*.woocommerce-breadcrumb {
+    display: none !important;
+}*/
+
+.wp-block-woocommerce-checkout.alignwide.wc-block-checkout {
+    margin-left: 40px;
+    /* Ajusta el margen izquierdo */
+    margin-right: 40px;
+    /* Ajusta el margen derecho */
+}
+
+.woocommerce-products-header {
+    margin-left: 60px;
+}
+
+
+.woocommerce-checkout .checkout .col2-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.woocommerce-checkout .checkout .col-12 {
+    width: 100%;
+}
+
+.woocommerce-checkout .checkout label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.woocommerce-checkout .checkout input[type="text"],
+.woocommerce-checkout .checkout input[type="email"],
+.woocommerce-checkout .checkout input[type="tel"],
+.woocommerce-checkout .checkout select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.woocommerce-checkout .checkout .col-1,
+.woocommerce-checkout .checkout .col-2 {
+    width: 48%;
+}
+
+.woocommerce-checkout .checkout .col-1 {
+    margin-right: 4%;
+}
+
+/* Estilo para los botones */
+.woocommerce-checkout .checkout button {
+    background-color: #0073aa;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.woocommerce-checkout .checkout button:hover {
+    background-color: #005d8d;
+}
+
+
+/* Aseguramos que los labels y los inputs estén en líneas separadas */
+.woocommerce-billing-fields__field-wrapper p {
+    display: block;
+    /* Hace que cada párrafo se muestre en una nueva línea */
+    margin-bottom: 15px;
+    /* Espacio entre los elementos del formulario */
+}
+
+.woocommerce-billing-fields__field-wrapper label {
+    display: block;
+    /* Los labels deben estar en bloque para ocupar toda la línea */
+    margin-bottom: 5px;
+    /* Espacio entre el label y el input */
+}
+
+.woocommerce-billing-fields__field-wrapper input,
+.woocommerce-billing-fields__field-wrapper select {
+    width: 100%;
+    /* Hace que los inputs y selects ocupen todo el ancho disponible */
+    padding: 10px;
+    /* Ajuste el relleno para mejorar la apariencia */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el tamaño total del elemento */
+}
+
+/* Aseguramos que los labels y los textarea estén en líneas separadas */
+.woocommerce-additional-fields__field-wrapper p {
+    display: block;
+    /* Hace que cada párrafo se muestre en una nueva línea */
+    margin-bottom: 15px;
+    /* Espacio entre los elementos del formulario */
+}
+
+.woocommerce-additional-fields__field-wrapper label {
+    display: block;
+    /* Los labels deben estar en bloque para ocupar toda la línea */
+    margin-bottom: 5px;
+    /* Espacio entre el label y el textarea */
+}
+
+.woocommerce-additional-fields__field-wrapper textarea {
+    width: 100%;
+    /* Hace que el textarea ocupe todo el ancho disponible */
+    padding: 10px;
+    /* Ajuste el relleno para mejorar la apariencia */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el tamaño total del elemento */
+    height: 150px;
+    /* Ajusta la altura del textarea */
+}
+
+
+/** WIDGET CARRITO **/
+/* Estilo del contenedor principal */
+.wc-block-mini-cart,
+.wp-block-woocommerce-mini-cart {
+    position: fixed;
+    /* Usamos 'fixed' para que se quede fijo en la pantalla al hacer scroll */
+    right: 20px;
+    /* Lo sitúa a 20 píxeles del borde derecho */
+    bottom: 20px;
+    /* Lo sitúa a 20 píxeles del borde inferior */
+    padding: 10px;
+    /* Añade un poco de espacio alrededor */
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo del botón */
+.wc-block-mini-cart__button {
+    background: none;
+    /* Elimina el fondo por defecto del botón */
+    border: none;
+    /* Elimina el borde del botón */
+    padding: 5px 10px;
+    /* Ajusta el espacio dentro del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo del contenedor del icono y el número (para intentar redondear el icono) */
+.wc-block-mini-cart__quantity-badge {
+    display: flex;
+    /* Para alinear el icono y el número */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    background-color: rgba(253, 101, 8, 0.7);
+    /* Añade un color de fondo al contenedor del icono */
+    border-radius: 50%;
+    /* Intenta hacerlo redondo */
+    padding: 15px;
+    /* Añade un poco de espacio alrededor del icono */
+    width: auto;
+    /* Ajusta el ancho automáticamente al contenido */
+    height: auto;
+    /* Ajusta la altura automáticamente al contenido */
+}
+
+/* Estilo del icono del carrito */
+.wc-block-mini-cart__icon {
+    fill: #333;
+    /* Cambia el color del icono */
+    width: 20px;
+    /* Ajusta el ancho del icono (ligeramente reducido) */
+    height: 20px;
+    /* Ajusta la altura del icono (ligeramente reducido) */
+    margin-right: 5px;
+    /* Añade espacio entre el icono y el número */
+    display: block;
+    /* Asegura que el SVG ocupe el espacio completo de su contenedor */
+}
+
+/* Estilo del número de artículos */
+.wc-block-mini-cart__badge {
+    background-color: rgba(54, 76, 221, 0.7);
+    /* Cambia el color de fondo del número */
+    color: #fff;
+    /* Cambia el color del texto del número */
+    font-size: 12px;
+    /* Ajusta el tamaño de la fuente del número */
+    padding: 3px 6px;
+    /* Ajusta el espacio alrededor del número */
+    border-radius: 50%;
+    /* Lo hace circular */
+}
+
+/* Ejemplo para cambiar el color del icono al pasar el ratón */
+.wc-block-mini-cart__quantity-badge:hover {
+    background-color: rgba(253, 101, 8, 1);
+}
+
+.wc-block-mini-cart__quantity-badge:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.wc-block-mini-cart__badge:hover {
+    background-color: rgb(54, 76, 221, 1);
+}
+
+
+/***************************************************/
+/*formulario de login WooCommerce y registro*/
+#customer_login {
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido verticalmente */
+    align-items: center;
+    /* Centra el contenido horizontalmente */
+}
+
+.woocommerce-form .form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del botón de login */
+#customer_login .woocommerce-form-login__submit {
+    background-color: rgba(253, 101, 8, 0.7);
+    /* Azul de WooCommerce */
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Transición suave */
+    cursor: pointer;
+}
+
+/* Estilo para el hover del botón de login */
+#customer_login .woocommerce-form-login__submit:hover {
+    background-color: #FA7A50;
+    /* Color azul más oscuro al pasar el ratón */
+    transform: scale(1.05);
+    /* Agrandar ligeramente al pasar el ratón */
+}
+
+/*REGISTRO*/
+#customer_registro .woocommerce-Button {
+    background-color: rgba(253, 101, 8, 0.7);
+    /* Color de fondo verde */
+    color: #fff;
+    /* Texto blanco */
+    padding: 12px 20px;
+    /* Relleno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    width: 100%;
+    /* Asegurarse de que ocupe todo el ancho */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Transición suave */
+    cursor: pointer;
+}
+
+#customer_registro .woocommerce-Button:hover {
+    background-color: #FA7A50;
+    /* Verde más oscuro al pasar el ratón */
+    transform: scale(1.05);
+    /* Agrandar ligeramente al pasar el ratón */
+
+
+}
+
+
+
+/******************************************************************************/
+/*FORMULARIO DIRECCION DE FACTURACION DE CHECHKOUT Y CONFIGURACION CUENTA*/
+@media (max-width: 1024px) {
+
+    #billing_first_name_field,
+    #billing_last_name_field {
+        width: 100%;
+        display: block;
+        margin-right: 2%;
+        box-sizing: border-box;
+    }
+}
+
+#billing_last_name_field {
+    margin-right: 0;
+}
+
+/* Ajustar el ancho de la etiqueta y el input según necesites */
+#billing_first_name_field label,
+#billing_last_name_field label {
+    width: 30%;
+    /* Ajusta el ancho de la etiqueta 
+    margin-right: 10px; /* Añade espacio entre la etiqueta y el input */
+    text-align: left;
+    /* Opcional: alinear el texto de la etiqueta */
+}
+
+#billing_first_name_field .woocommerce-input-wrapper,
+#billing_last_name_field .woocommerce-input-wrapper {
+    width: 65%;
+    /* Ajusta el ancho del input */
+}
+
+#billing_first_name_field,
+#billing_last_name_field,
+#billing_country_field,
+#billing_address_1_field,
+#billing_address_2_field,
+#billing_city_field,
+#billing_state_field,
+#billing_postcode_field,
+#billing_phone_field,
+#billing_email_field {
+    display: block;
+    text-align: left;
+}
+
+.required_field {
+    display: inline-block;
+    white-space: nowrap;
+    /* Evita que el texto se rompa en varias líneas */
+}
+
+/***********************************************************************/
+/* FORMULARIO DIRECCIÓN DE ENVÍO */
+
+.woocommerce-shipping-fields {
+    display: block;
+}
+
+#shipping_first_name_field,
+#shipping_last_name_field {
+    width: 48%;
+    display: inline-block;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+
+#shipping_country_field,
+#shipping_address_1_field,
+#shipping_address_2_field,
+#shipping_city_field,
+#shipping_state_field,
+#shipping_postcode_field {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+
+    .woocommerce-shipping-fields {
+        display: block;
+    }
+
+    #shipping_first_name_field,
+    #shipping_last_name_field {
+        width: 100%;
+        display: block;
+        margin-right: 2%;
+        box-sizing: border-box;
+    }
+}
+
+/****************************************************************/
+/*DETALLES DE LA CUENTA (ACCOUNT DETAILS)*/
+.woocommerce-EditAccountForm {
+    display: block;
+}
+
+#camposPassword {
+    display: block;
+}
+
+@media (max-width: 1024px) {
+
+    #account_firstName,
+    #account_lastName {
+        width: 100%;
+        display: block;
+        margin-right: 2%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+}
+
+/*********************************************************************/
+/*SECCION HISTORIAL DE RESERVAS*/
+.h2-tabla-reservas{
+    color: #000;
+}
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+    color: #000;
+}
+
+.tabla-reservas th,
+.tabla-reservas td {
+    border:1px solid #ccc;
+    padding: 8px;
+}
+
+/*********************************************************/
+/* FINALIZACION DE PAGO - /order-received/ */
+.woocommerce-order address {
+  background-color: #f8f8f8;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  border: none !important;
+}
+
+.woocommerce-customer-details--phone{
+    display: none;
+}
+
+.woocommerce-customer-details--email{
+    text-transform: none;
+}
+
+.woocommerce-order .woocommerce-column__title {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.woocommerce-order .woocommerce-columns--addresses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  text-align: center;
+}
+ .woocommerce-column--billing-address.col-1,
+.woocommerce-column--shipping-address.col-2 {
+  flex: 0 0 100% !important;
+  max-width: 45.333333% !important;
+}
+
+.boton-seguir-comprando {
+  display: inline-block;
+  background-color: #28a745; /* verde éxito */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.boton-seguir-comprando:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+  text-decoration: none;
+  color: #fff;
+}
+
+/*FORMULARIO ELIMINAR CUENTA*/
