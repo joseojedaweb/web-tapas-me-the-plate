@@ -1,4 +1,4 @@
-# WordPress theme/plugin repository .gitignore (para subir SOLO tu tema)
+# WordPress theme/plugin repository .gitignore
 # Node / build
 node_modules/
 npm-debug.log
@@ -28,7 +28,7 @@ Thumbs.db
 .tmp/
 .sass-cache/
 
-# WordPress uploads (NO subas medios del sitio)
+# WordPress uploads 
 wp-content/uploads/
 
 # Config del servidor/hosting
